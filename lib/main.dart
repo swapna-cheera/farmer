@@ -5,6 +5,7 @@ import 'package:farmer_app/planting_screen.dart';
 import 'package:farmer_app/sensing_screen.dart';
 import 'package:farmer_app/signin_screen.dart';
 import 'package:farmer_app/signup_screen.dart';
+import 'package:farmer_app/demo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -55,15 +56,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      initialRoute: '/demoscreen',
 // Define all your named routes here
       routes: {
-        '/': (context) => AuthScreen(), //  starting screen (AuthScreen)
+        '/auth': (context) => AuthScreen(), //  starting screen (AuthScreen)
         '/signin': (context) => const SignInScreen(), // Sign-in screen
         '/signup': (context) => const SignUpScreen(), // Sign-up screen
         '/home': (context) =>
             const HomeScreen(), // Home screen after login and signup
         '/sensing': (context) => const SensingScreen(), // Sensing screen
         '/planting': (context) => const PlantingScreen(), // Planting screen
+        '/demoscreen': (context) => const DemoScreen(), // Websocket screen
       },
       // Optional: Handle undefined routes (for unknown URLs)
       onUnknownRoute: (settings) {
