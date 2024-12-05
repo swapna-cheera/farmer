@@ -51,7 +51,7 @@ class _SensingScreenState extends State<SensingScreen> {
               // Extract data
               final Map<String, dynamic> sensorsData = {
                 'Motor On/Off': data['motor'] ? 'On' : 'Off',
-                'Selonoid Valve': data['selonoidvalve'],
+                'Solenoid Valve': data['solenoidvalve'],
                 'Soil Moisture': data['soilmoisture'],
                 'Temperature & Humidity': data['temperaturehumidity'],
                 'Water Level Indicator': data['waterlevelindicator'],
